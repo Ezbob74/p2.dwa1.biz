@@ -14,7 +14,7 @@ If you want a different default time format for this app, set it below
 */
 
 # What is the name of this app?
-	define('APP_NAME', 'TWEEEETer');  
+	define('APP_NAME', 'MicroBlog');  
 
 # When email is sent out from the server, where should it come from?
 # Ideally, this should match the domain name
@@ -31,7 +31,7 @@ A email designated to receive messages from the server. Examples:
 	define('SYSTEM_EMAIL', 'bm@nsouri.com'); 
 
 # Default DB name for this app
-	define('DB_NAME', "p2_dwa1_biz"); 
+	define('DB_NAME', "dwabiz_p2_dwa1_biz"); 
 
 # Timezone
 	define('TIMEZONE', 'America/New_York');
