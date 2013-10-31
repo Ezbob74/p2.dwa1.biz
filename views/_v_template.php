@@ -5,8 +5,8 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
 	
-    <!-- JS/CSS File we want on every page -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>				
+    
+    			
 
 	<link rel="stylesheet" href="/css/sample-app.css" type="text/css">
     <!-- Controller Specific JS/CSS -->
@@ -43,5 +43,8 @@
 
 
 	<?php if(isset($client_files_body)) echo $client_files_body; ?>
+
+    <!-- JS/CSS File every page -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </body>
 </html>
