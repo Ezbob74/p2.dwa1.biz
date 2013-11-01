@@ -7,7 +7,7 @@
 	Password <input type='password' name='password' required><br>
 <?php if(isset($error)): ?>
         <div id='error' class='errors'>
-            Sign-up failed. Please double check.
+            Sign-up failed. Please use a different email.
         </div>
         <br>
     <?php endif; ?>

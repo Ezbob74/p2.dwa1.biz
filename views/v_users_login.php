@@ -11,8 +11,7 @@
             Login failed. Please double check your email and password.
         </div>
         <br>
-    <?php $error= NULL;
-    		endif; ?>
+    <?php endif; ?>
 
 	
 	<input type='submit' value='Login' >

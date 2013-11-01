@@ -10,26 +10,44 @@ class users_controller extends base_controller {
         echo "This is the index page";
     }
 
-    public function signup() {
+    public function signup($error = NULL) {
         $this->template->content=View::instance('v_users_signup');
-
+        # error checking passed to view
+        $this->template->content->error = $error;
         echo $this->template;
     }
 
 public function p_signup() {
 
-       
+        $q= 'Select email         
+          From users            
+           WHERE email="'.$_POST['email'].'"';
+                  //echo $q;
+        $emailexists= DB::instance(DB_NAME)->select_field($q);
+        //echo $token;
+        #success
+        if($emailexists){  
 
-        $_POST['created']= Time::now();
-        $_POST['password']= sha1(PASSWORD_SALT.$_POST['password']); 
-        $_POST['token']= sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string()); 
+           // echo "";
+            Router::redirect("/users/signup/error"); 
+          
+         }
+        #
+        else{
+           
+            $_POST['created']= Time::now();
+            $_POST['password']= sha1(PASSWORD_SALT.$_POST['password']); 
+            $_POST['token']= sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string()); 
 
         //echo "<pre>";
         // print_r($_POST);
         //echo "<pre>";
         
-        DB::instance(DB_NAME)->insert_row('users',$_POST);
-        Router::redirect('/users/login');
+            DB::instance(DB_NAME)->insert_row('users',$_POST);
+            Router::redirect('/users/login');
+        }
+
+        
     }
 
 
