@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document*/
+/*Define the body element's color*/
+body {
+	background:#FFFFFF;
+}
+h1 {
+	font-family:Verdana,Helvetica,sans-serif;
+	font-size: 38px;
+}
+/*This section is for the paragraph section*/
+p {
+	font-family:Verdana,Helvetica,sans-serif;
+	font-size:18px;
+}
+/*This section is for the main body of the page.*/
+#main {
+	margin:0 auto;
+	width: 760px;
+}
