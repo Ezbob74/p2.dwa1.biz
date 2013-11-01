@@ -13,8 +13,17 @@ p {
 	font-family:Verdana,Helvetica,sans-serif;
 	font-size:18px;
 }
+#error {
+	font-family:Verdana,Helvetica,sans-serif;
+	color:red;
+	font-size:18x;
+}
 /*This section is for the main body of the page.*/
 #main {
 	margin:0 auto;
 	width: 760px;
+}
+nav {
+	font-family:Verdana,Helvetica,sans-serif;
+	font-size: 18px;
 }

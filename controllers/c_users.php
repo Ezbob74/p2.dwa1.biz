@@ -24,18 +24,22 @@ public function p_signup() {
         $_POST['password']= sha1(PASSWORD_SALT.$_POST['password']); 
         $_POST['token']= sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string()); 
 
-        echo "<pre>";
-        print_r($_POST);
-        echo "<pre>";
+        //echo "<pre>";
+        // print_r($_POST);
+        //echo "<pre>";
         
         DB::instance(DB_NAME)->insert_row('users',$_POST);
         Router::redirect('/users/login');
     }
 
 
-    public function login() {
+    public function login($error = NULL) {
         
     $this->template->content=View::instance('v_users_login');    
+
+ # Pass data to the view
+    $this->template->content->error = $error;
+
     echo $this->template;
 
 
@@ -53,18 +57,22 @@ public function p_signup() {
           From users            
            WHERE email="'.$_POST['email'].'"
              AND password= "'.$_POST['password'].'"';
-        // echo $q;
+         //echo $q;
         $token= DB::instance(DB_NAME)->select_field($q);
-        
+        //echo $token;
         #success
-        if($token){
-            setcookie('token',$token,strtotime('+2 week'),'/');
-            Router::redirect('/');
-        }
+        if(!$token){  
+
+           // echo "Success";
+            
+          Router::redirect("/users/login/error"); 
+         }
         #
         else{
-            echo "Login failed";
-
+           // echo "Failed";
+            //echo "Login failed";
+            setcookie('token',$token,strtotime('+2 week'),'/');
+            Router::redirect('/posts/own');
         }
 
             
@@ -85,7 +93,6 @@ public function p_signup() {
     if(!$this->user){
        // Router::redirect('/');
         die('Members Only <a href="/users/login">Login</a>');
-
 
     }
 

@@ -14,7 +14,7 @@ class posts_controller extends base_controller {
 
 	public function add() {
 
-		$this->template = view::instance("v_posts_add");
+		$this->template->content = View::instance("v_posts_add");
 
 		echo $this->template;
 
@@ -29,7 +29,8 @@ class posts_controller extends base_controller {
 		$_POST['modified'] = Time::now();
 
 		DB::instance(DB_NAME)->insert('posts',$_POST);
-	print_r($_POST);
+	//print_r($_POST);
+         Router::redirect('/users/profile/');   
 	}
 
 	public function index(){
@@ -66,6 +67,33 @@ class posts_controller extends base_controller {
 
 
 	}
+public function own(){
+
+         # Set up the View
+    $this->template->content = View::instance('v_posts_own');
+    $this->template->title   = "My Posts";
+
+    # Query
+    $q = 'SELECT 
+            posts.content,
+            posts.created,
+            posts.user_id AS post_user_id
+          
+        FROM posts
+        WHERE posts.user_id  ='.$this->user->user_id ;
+        //echo $q;
+
+    # Run the query, store the results in the variable $posts
+    $posts = DB::instance(DB_NAME)->select_rows($q);
+
+    # Pass data to the View
+    $this->template->content->posts = $posts;
+
+    # Render the View
+    echo $this->template;
+
+
+    }
 
 	
 
@@ -75,7 +103,7 @@ class posts_controller extends base_controller {
     $this->template->content = View::instance("v_posts_users");
     $this->template->title   = "Users";
 
-    # Build the query to get all the users
+    # Build the query to get all the users excluding the user
     $q = "SELECT *
         FROM users 
         WHERE user_id!=".$this->user->user_id;

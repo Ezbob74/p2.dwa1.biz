@@ -15,19 +15,20 @@
 </head>
 
 <body>  
-
+<div id="main">  
     <nav>
         <menu>
-                <li><a href='/'>Home</a></li>
+                <a href='/'>Home</a>:: 
                 
             <?php if($user): ?>
-                <li><a href='/posts/add'>Add Post</a></li>
-                <li><a href='/posts/'>View Posts</a></li>
-                <li><a href='/posts/users'>Follow Users</a></li>
-                <li><a href='/users/logout'>Logout</a></li>
+                <a href='/posts/add'>Add Post</a> :: 
+                <a href='/posts/'>View Posts</a> :: 
+                <a href='/posts/users'>Follow Users</a> :: 
+                <a href='/posts/own'>My Own Posts</a> ::
+                <a href='/users/logout'>Logout</a>
             <?php else: ?>
-                <li><a href='/users/signup'>Sign Up</a></li>
-                <li><a href='/users/login'>Log In</a></li>
+                <a href='/users/signup'>Sign Up</a> :: 
+                <a href='/users/login'>Log In</a>
             <?php endif; ?>
         </menu>
     </nav>
@@ -46,5 +47,6 @@
 
     <!-- JS/CSS File every page -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</div>  
 </body>
 </html>
