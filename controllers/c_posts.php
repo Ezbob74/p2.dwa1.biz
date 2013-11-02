@@ -30,7 +30,7 @@ class posts_controller extends base_controller {
 
 		DB::instance(DB_NAME)->insert('posts',$_POST);
 	//print_r($_POST);
-         Router::redirect('/users/profile/');   
+         Router::redirect('/posts/own/');   
 	}
 
 	public function index(){
@@ -75,6 +75,7 @@ public function own(){
 
     # Query
     $q = 'SELECT 
+            posts.post_id,
             posts.content,
             posts.created,
             posts.user_id AS post_user_id
@@ -97,7 +98,7 @@ public function own(){
 
 	
 
-		public function users() {
+	public function users() {
 
     # Set up the View
     $this->template->content = View::instance("v_posts_users");
@@ -157,6 +158,17 @@ public function unfollow($user_id_followed) {
 
     # Send them back
     Router::redirect("/posts/users");
+
+}
+
+public function delete($posts_id) {
+
+    # Delete this connection
+    $where_condition = 'WHERE post_id = '.$posts_id;
+    DB::instance(DB_NAME)->delete('posts', $where_condition);
+
+    # Send them back
+    Router::redirect("/posts/own");
 
 }
 

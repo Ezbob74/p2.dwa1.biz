@@ -51,10 +51,10 @@ error_reporting(1);
         You are logged in as <?=$user->first_name?> <?=$user->last_name?><br>
     <?php endif; ?>
     
-    <br><br>
+   <br>
 
     <?php if(isset($content)) echo $content; ?>
-
+ <br>
 
 
 	<?php if(isset($client_files_body)) echo $client_files_body; ?>
