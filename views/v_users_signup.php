@@ -1,10 +1,15 @@
 <h2>Sign Up</h2>
-
-<form method='POST' action='/users/p_signup'>
-	First Name <input type='text' name='first_name' required><br>
-	Last Name <input type='text' name='last_name' required><br>
-	Email <input type='text' name='email' required><br>
-	Password <input type='password' name='password' required><br>
+ <script>
+    $(document).ready(function(){
+        $("#formID").validationEngine('attach');
+       });
+    </script>
+<form id="formID" method='POST' action='/users/p_signup'>
+	First Name <input class="validate[custom[onlyLetterSp]]" type='text' name='first_name' required><BR><BR>
+	Last Name <input class="validate[custom[onlyLetterSp]]" type='text' name='last_name' required><BR><BR>
+	
+	Email <input class="validate[required,custom[email]] text-input" type="text" name="email" id="email" /><BR><BR>
+	Password <input type='password' name='password' required><BR><BR>
 <?php if(isset($error)): ?>
         <div id='error' class='errors'>
             Sign-up failed. Please use a different email.

@@ -90,7 +90,7 @@ public function p_signup() {
            // echo "Failed";
             //echo "Login failed";
             setcookie('token',$token,strtotime('+2 week'),'/');
-            Router::redirect('/posts/own');
+            Router::redirect('/posts/');
         }
 
             
