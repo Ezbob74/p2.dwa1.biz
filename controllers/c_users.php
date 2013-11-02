@@ -16,8 +16,9 @@ class users_controller extends base_controller {
         $this->template->content->error = $error;
         echo $this->template;
     }
-
-public function p_signup() {
+    
+    // this is the function that processes the signup 
+    public function p_signup() {
 
         $q= 'Select email         
           From users            
@@ -95,7 +96,24 @@ public function p_signup() {
 
             
     }
+    public function update(){
 
+           
+        $new_modified= Time::now();
+        $new_password= sha1(PASSWORD_SALT.$_POST['password']); 
+        #$new_first_name=$_POST['first_name']
+
+        $data=Array('modified'=>$new_modified,
+                    'password'=>$new_password,
+                    'first_name'=>$_POST['first_name'],
+                    'last_name'=>$_POST['last_name'],
+                    'email'=>$_POST['email']
+                    );
+        DB::instance(DB_NAME)->update('users',$data,'WHERE user_id=' .$this->user->user_id);
+            Router::redirect('/posts/');
+        
+          
+    }
     public function logout() {
         $new_token=sha1(TOKEN_SALT.$this->user->email.Utils::generate_random_string()); 
         $data=Array('token'=>$new_token);
@@ -104,7 +122,7 @@ public function p_signup() {
         Router::redirect('/');
 
             }
-
+    // this function let the user view other users profiles
     public function profile($user_name = NULL) {
 
 
@@ -117,32 +135,53 @@ public function p_signup() {
     $this->template->content=View::instance('v_users_profile');    
     // $content=View::instance('v_users_profile'); 
     $this->template->title= "Profile :: ".$user_name;
+   
+   $q= 'Select *         
+          From users            
+           WHERE email="'.$user_name.'"';
+        // echo $q;
+        $user= DB::instance(DB_NAME)->select_row($q);
+
+    $this->template->content->user=$user;
+    // $this->template->content->first_name=$first_name;
+    // $content->user_name=$user_name;
+
+     //$this->template->content=$content;
+
+    # Render View    
+     echo $this->template;
+
+    
+  }
+  // This function is to edit users profile 
+  public function editprofile() {
+
+    if(!$this->user){
+       // Router::redirect('/');
+        die('Members Only <a href="/users/login">Login</a>');
+
+    }
+ # Create a new View instance
+    $this->template->content=View::instance('v_users_editprofile');    
+  
+  //  $this->template->title= "Profile :: ".$user_name;
     $client_files_head=Array('/css/profile.css','/css/master.css','/js/profile1.js');
     $this->template->client_files_head=Utils::load_client_files($client_files_head);
 
 
     $client_files_body=Array('/js/profile2.js');
     $this->template->client_files_body=Utils::load_client_files($client_files_body);
+  
+  # Pass information to the view instance
+  //  $this->template->content->user_name=$user_name;
+ 
 
-    $this->template->content->user_name=$user_name;
-    // $content->user_name=$user_name;
-
-     //$this->template->content=$content;
-
-        
+        # Render View  
      echo $this->template;
 
+ 
 
-    # Create a new View instance
-    # Do *not* include .php with the view name
-    //$view = View::instance('v_users_profile');
+  }
 
-    # Pass information to the view instance
-    ///$view->user_name = $user_name;
-
-    # Render View
-    //echo $view;
-
-}
 
 } # end of the class

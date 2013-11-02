@@ -39,6 +39,7 @@ error_reporting(1);
                 <a href='/posts/'>View Posts</a> :: 
                 <a href='/posts/users'>Follow Users</a> :: 
                 <a href='/posts/own'>My Own Posts</a> ::
+                 <a href='/users/editprofile'>Edit Profile</a> :: 
                 <a href='/users/logout'>Logout</a>
             <?php else: ?>
                 <a href='/users/signup'>Sign Up</a> :: 
