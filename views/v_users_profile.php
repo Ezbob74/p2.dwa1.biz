@@ -1,5 +1,6 @@
 <?php if(isset($user)): ?>
-    <h2>This is the profile for <?=$user['user_name']?></h2>
+    
+    <h2>Profile</h2>
  
 	First Name: <?=$user['first_name']?><BR><BR>
 	Last Name : <?=$user['last_name']?><BR><BR>

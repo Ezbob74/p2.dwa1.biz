@@ -15,7 +15,7 @@ class posts_controller extends base_controller {
 	public function add() {
 
 		$this->template->content = View::instance("v_posts_add");
-
+        $this->template->title= APP_NAME. " :: Add Post ";
 		echo $this->template;
 
 	}
@@ -37,7 +37,7 @@ class posts_controller extends base_controller {
 
 		 # Set up the View
     $this->template->content = View::instance('v_posts_index');
-    $this->template->title   = "All Posts";
+    $this->template->title   = APP_NAME. " :: All Posts";
 
     # Query
     $q = 'SELECT 
@@ -71,7 +71,7 @@ public function own(){
 
          # Set up the View
     $this->template->content = View::instance('v_posts_own');
-    $this->template->title   = "My Posts";
+    $this->template->title   = APP_NAME. " :: My Posts";
 
     # Query
     $q = 'SELECT 
@@ -102,7 +102,7 @@ public function own(){
 
     # Set up the View
     $this->template->content = View::instance("v_posts_users");
-    $this->template->title   = "Users";
+    $this->template->title   = APP_NAME. " :: Users";
 
     # Build the query to get all the users excluding the user
     $q = "SELECT *

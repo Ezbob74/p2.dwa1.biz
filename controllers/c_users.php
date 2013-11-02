@@ -12,11 +12,13 @@ class users_controller extends base_controller {
 
     public function signup($error = NULL) {
         $this->template->content=View::instance('v_users_signup');
+
+        $this->template->title= APP_NAME. " :: Sign up";
         # error checking passed to view
         $this->template->content->error = $error;
         echo $this->template;
     }
-    
+
     // this is the function that processes the signup 
     public function p_signup() {
 
@@ -55,7 +57,7 @@ class users_controller extends base_controller {
     public function login($error = NULL) {
         
     $this->template->content=View::instance('v_users_login');    
-
+    $this->template->title= APP_NAME. " :: Login";
  # Pass data to the view
     $this->template->content->error = $error;
 
@@ -134,7 +136,7 @@ class users_controller extends base_controller {
 
     $this->template->content=View::instance('v_users_profile');    
     // $content=View::instance('v_users_profile'); 
-    $this->template->title= "Profile :: ".$user_name;
+    $this->template->title= APP_NAME. " :: Profile :: ".$user_name;
    
    $q= 'Select *         
           From users            
@@ -161,9 +163,10 @@ class users_controller extends base_controller {
         die('Members Only <a href="/users/login">Login</a>');
 
     }
- # Create a new View instance
+  # Create a new View instance
     $this->template->content=View::instance('v_users_editprofile');    
-  
+  # Page title  
+    $this->template->title= APP_NAME. ":: Edit Profile";
   //  $this->template->title= "Profile :: ".$user_name;
     $client_files_head=Array('/css/profile.css','/css/master.css','/js/profile1.js');
     $this->template->client_files_head=Utils::load_client_files($client_files_head);
