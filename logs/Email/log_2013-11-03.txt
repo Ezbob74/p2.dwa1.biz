@@ -101,27 +101,3 @@
 2013-11-03 9:51:21 - INFO --> BCC:  
 2013-11-03 9:51:21 - INFO --> Subject: Password reset message from MicroBlog 
 2013-11-03 9:51:21 - INFO --> Body: test 
-2013-11-03 14:46:34 - INFO --> -------------------------- 
-2013-11-03 14:46:34 - INFO --> Controller/Method: users/p_emailpassword 
-2013-11-03 14:46:34 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
-2013-11-03 14:46:34 - INFO --> To: MicroBlog (bm@nsouri.com),  
-2013-11-03 14:46:34 - INFO --> CC:  
-2013-11-03 14:46:34 - INFO --> BCC:  
-2013-11-03 14:46:34 - INFO --> Subject: Password reset message from MicroBlog 
-2013-11-03 14:46:34 - INFO --> Body: This is the password: yzesumem 
-2013-11-03 14:50:00 - INFO --> -------------------------- 
-2013-11-03 14:50:00 - INFO --> Controller/Method: users/p_emailpassword 
-2013-11-03 14:50:00 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
-2013-11-03 14:50:00 - INFO --> To: MicroBlog (bm@nsouri.com),  
-2013-11-03 14:50:00 - INFO --> CC:  
-2013-11-03 14:50:00 - INFO --> BCC:  
-2013-11-03 14:50:00 - INFO --> Subject: Password reset message from MicroBlog 
-2013-11-03 14:50:00 - INFO --> Body: This is the password: ytyzyqyq 
-2013-11-03 15:09:15 - INFO --> -------------------------- 
-2013-11-03 15:09:15 - INFO --> Controller/Method: users/p_emailpassword 
-2013-11-03 15:09:15 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
-2013-11-03 15:09:15 - INFO --> To: MicroBlog (bm@nsouri.com),  
-2013-11-03 15:09:15 - INFO --> CC:  
-2013-11-03 15:09:15 - INFO --> BCC:  
-2013-11-03 15:09:15 - INFO --> Subject: Password reset message from MicroBlog 
-2013-11-03 15:09:15 - INFO --> Body: This is the password: pegypuju 
