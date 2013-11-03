@@ -69,8 +69,8 @@ class posts_controller extends base_controller {
     # Render the View
     echo $this->template;
 
-
 	}
+
 public function own(){
 
          # Set up the View
