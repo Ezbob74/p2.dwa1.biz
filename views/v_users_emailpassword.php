@@ -8,18 +8,24 @@
     <div class="container">
     <form id="formID" method='POST' action='/users/p_emailpassword'>
 
-        <label>Email:</label> <input class="validate[required,custom[email]] text-input" type="text" name="email" id="email" required/><BR>
-           
+        <label>Email:</label> <input class="validate[required,custom[email]] text-input" type="text" name="email" id="email" required/><BR><BR>
+          
     </div>
     
     
     <?php if(isset($error)): ?>
         <div id='error' class='errors'>
-            Send failed. Please contact support.
+           
+    <?php if($error=='error1'): ?>
+            Email was not found. Please enter the email used during signup.
+    <?php elseif($error=='error2'): ?>
+            Send failed or cant change password. Please contact support.
+    <?php endif; ?>
+    
         </div>
         <br>
     <?php endif; ?>
 
     <input type='submit' value='Email Password' >
-
+    <input type='reset' value='Reset'> 
 </form>

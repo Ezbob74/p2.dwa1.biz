@@ -26,10 +26,9 @@ class posts_controller extends base_controller {
 	}
 
 	public function p_add(){
-
-		
-		
-		$_POST['user_id'] = $this->user->user_id;
+        # looks for urls and make them links    
+		$_POST['content'] = Utils::make_urls_links($_POST['content'] );
+        $_POST['user_id'] = $this->user->user_id;
 		$_POST['created'] = Time::now();
 		$_POST['modified'] = Time::now();
 

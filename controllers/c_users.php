@@ -141,38 +141,45 @@ class users_controller extends base_controller {
         }
       else {  
 
-        $password=sha1(PASSWORD_SALT."test");
 
-     
-
-        $q= 'Select email         
+  
+        $q= 'Select user_id         
           From users            
            WHERE email="'.$_POST['email'].'"';
          //echo $q;
-        $email= DB::instance(DB_NAME)->select_field($q);
+        $user_id= DB::instance(DB_NAME)->select_field($q);
         
         #email doesnt exists
-        if(!$email){  
-
-           
-            
-          Router::redirect("/users/emailpassword/error"); 
+        if(!$user_id){  
+             
+          Router::redirect("/users/emailpassword/error1"); 
          }
         # email exists , email the password
         else{
+              $password=Utils::generate_random_string(8); 
+              $new_password=sha1(PASSWORD_SALT.$password);
+              $new_modified= Time::now();
+
+              $data=Array('modified'=>$new_modified,
+                         'password'=>$new_password             
+                         );
+              $success= DB::instance(DB_NAME)->update('users',$data,'WHERE user_id=' .$user_id); 
+         
+            
             $to[]    = Array("name" => APP_NAME, "email" => SYSTEM_EMAIL);
             $from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
             $subject = "Password reset message from ".APP_NAME;        
- // echo "string";
+
             #$body = View::instance('v_email_template');
-            $body = "test";
+            $body = "This is the password: ".$password ;
           # Send email
            $sent = Email::send($to, $from, $subject, $body, FALSE, '');
-           
-           if($sent)
+          # IF EMAIL IS SENT  and password update is successful proceed to login           
+           if($sent AND $success)
             Router::redirect('/users/login');
+          # else error out
            else
-            Router::redirect('/users/emailpassword/error');
+            Router::redirect('/users/emailpassword/error2');
         }
         }  # end if first else   
     }

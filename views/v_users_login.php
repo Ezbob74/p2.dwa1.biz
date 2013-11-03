@@ -10,7 +10,7 @@
 
         <label>Email:</label> <input class="validate[required,custom[email]] text-input" type="text" name="email" id="email" required/><BR>
    
-        <label>Password:</label>  <input type='text' name='password' required><br>
+        <label>Password:</label>  <input type='text' name='password' required><br><BR>
     </div>
     
     
@@ -22,6 +22,6 @@
     <?php endif; ?>
 
     <input type='submit' value='Login' >
-
+    <input type='reset' value='Reset'> 
 </form>
 

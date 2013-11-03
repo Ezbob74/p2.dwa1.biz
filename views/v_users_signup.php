@@ -26,5 +26,5 @@
         <br>
     <?php endif; ?>
 	<input type='submit' value='Sign Up'>
-
+    <input type='reset' value='Reset'> 
 </form>
