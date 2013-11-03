@@ -8,9 +8,9 @@
     <div class="container">
     <form id="formID" method='POST' action='/users/p_login'>
 
-        <label>Email:</label> <input class="validate[required,custom[email]] text-input" type="text" name="email" id="email" /><BR>
+        <label>Email:</label> <input class="validate[required,custom[email]] text-input" type="text" name="email" id="email" required/><BR>
    
-        <label>Password:</label>  <input type='text' name='password'><br>
+        <label>Password:</label>  <input type='text' name='password' required><br>
     </div>
     
     
