@@ -16,8 +16,8 @@ class users_controller extends base_controller {
         $this->template->title= APP_NAME. " :: Sign up";
         $client_files_head=Array('/js/languages/jquery.validationEngine-en.js',
                              '/js/jquery.validationEngine.js',
-                             '/css/validationEngine.jquery.css',
-                             '/css/template.css');
+                             '/css/validationEngine.jquery.css'
+                             );
         $this->template->client_files_head=Utils::load_client_files($client_files_head);
         # error checking passed to view
         $this->template->content->error = $error;
@@ -65,8 +65,8 @@ class users_controller extends base_controller {
     $this->template->title= APP_NAME. " :: Login";
         $client_files_head=Array('/js/languages/jquery.validationEngine-en.js',
                              '/js/jquery.validationEngine.js',
-                             '/css/validationEngine.jquery.css',
-                             '/css/template.css');
+                             '/css/validationEngine.jquery.css'
+                             );
         $this->template->client_files_head=Utils::load_client_files($client_files_head);    
  # Pass data to the view
     $this->template->content->error = $error;
@@ -180,8 +180,8 @@ class users_controller extends base_controller {
   //  $this->template->title= "Profile :: ".$user_name;
     $client_files_head=Array('/js/languages/jquery.validationEngine-en.js',
                              '/js/jquery.validationEngine.js',
-                             '/css/validationEngine.jquery.css',
-                             '/css/template.css');
+                             '/css/validationEngine.jquery.css'
+                             );
     $this->template->client_files_head=Utils::load_client_files($client_files_head);
 
 

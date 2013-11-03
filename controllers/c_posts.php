@@ -16,6 +16,11 @@ class posts_controller extends base_controller {
 
 		$this->template->content = View::instance("v_posts_add");
         $this->template->title= APP_NAME. " :: Add Post ";
+        $client_files_head=Array('/js/languages/jquery.validationEngine-en.js',
+                             '/js/jquery.validationEngine.js',
+                             '/css/validationEngine.jquery.css'
+                             );
+        $this->template->client_files_head=Utils::load_client_files($client_files_head);
 		echo $this->template;
 
 	}
