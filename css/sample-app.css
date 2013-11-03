@@ -58,7 +58,7 @@ p {
 #error {
 	font-family:Verdana,Helvetica,sans-serif;
 	color:red;
-	font-size:18x;
+	font-size:18px;
 }
 /*This section is for the main body of the page.*/
 #main {
