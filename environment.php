@@ -13,7 +13,7 @@ define('IN_PRODUCTION', FALSE);
 define('DISPLAY_ERRORS', TRUE);
 
 # To avoid accidentally sending a mass amount of emails to your users when testing, always disable outgoing emails on your local environment
-define('ENABLE_OUTGOING_EMAIL', FALSE);
+define('ENABLE_OUTGOING_EMAIL', TRUE);
 
 # To learn more about fakemail, goto /core/controllers/c_coreutils.php test_fakemail()
 define('FAKEMAIL', FALSE);

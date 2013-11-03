@@ -1,0 +1,103 @@
+2013-11-03 9:30:10 - INFO --> -------------------------- 
+2013-11-03 9:30:10 - INFO --> Controller/Method: users/p_emailpassword 
+2013-11-03 9:30:10 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY bm@nsouri.com 
+2013-11-03 9:30:10 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
+2013-11-03 9:30:10 - INFO --> To: MicroBlog (bm@nsouri.com),  
+2013-11-03 9:30:10 - INFO --> CC:  
+2013-11-03 9:30:10 - INFO --> BCC:  
+2013-11-03 9:30:10 - INFO --> Subject: Password reset 
+2013-11-03 9:30:10 - INFO --> Body: test 
+2013-11-03 9:32:49 - INFO --> -------------------------- 
+2013-11-03 9:32:49 - INFO --> Controller/Method: users/p_emailpassword 
+2013-11-03 9:32:49 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY bm@nsouri.com 
+2013-11-03 9:32:49 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
+2013-11-03 9:32:49 - INFO --> To: MicroBlog (bm@nsouri.com),  
+2013-11-03 9:32:49 - INFO --> CC:  
+2013-11-03 9:32:49 - INFO --> BCC:  
+2013-11-03 9:32:49 - INFO --> Subject: Password reset 
+2013-11-03 9:32:49 - INFO --> Body: test 
+2013-11-03 9:34:18 - INFO --> -------------------------- 
+2013-11-03 9:34:18 - INFO --> Controller/Method: users/p_emailpassword 
+2013-11-03 9:34:18 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY bm@nsouri.com 
+2013-11-03 9:34:18 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
+2013-11-03 9:34:18 - INFO --> To: MicroBlog (bm@nsouri.com),  
+2013-11-03 9:34:18 - INFO --> CC:  
+2013-11-03 9:34:18 - INFO --> BCC:  
+2013-11-03 9:34:18 - INFO --> Subject: Password reset 
+2013-11-03 9:34:18 - INFO --> Body: test 
+2013-11-03 9:36:48 - INFO --> -------------------------- 
+2013-11-03 9:36:48 - INFO --> Controller/Method: users/p_emailpassword 
+2013-11-03 9:36:48 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY bm@nsouri.com 
+2013-11-03 9:36:48 - INFO --> From: MicroBlog (bm@nsouri.com) 
+2013-11-03 9:36:48 - INFO --> To: MicroBlog (bm@nsouri.com),  
+2013-11-03 9:36:48 - INFO --> CC:  
+2013-11-03 9:36:48 - INFO --> BCC:  
+2013-11-03 9:36:48 - INFO --> Subject: Password reset 
+2013-11-03 9:36:48 - INFO --> Body: test 
+2013-11-03 9:42:19 - INFO --> -------------------------- 
+2013-11-03 9:42:19 - INFO --> Controller/Method: users/p_emailpassword 
+2013-11-03 9:42:19 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY bm@nsouri.com 
+2013-11-03 9:42:19 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
+2013-11-03 9:42:19 - INFO --> To: MicroBlog (bm@nsouri.com),  
+2013-11-03 9:42:19 - INFO --> CC:  
+2013-11-03 9:42:19 - INFO --> BCC:  
+2013-11-03 9:42:19 - INFO --> Subject: Password reset 
+2013-11-03 9:42:19 - INFO --> Body: test 
+2013-11-03 9:43:32 - INFO --> -------------------------- 
+2013-11-03 9:43:32 - INFO --> Controller/Method: users/p_emailpassword 
+2013-11-03 9:43:32 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY bm@nsouri.com 
+2013-11-03 9:43:32 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
+2013-11-03 9:43:32 - INFO --> To: MicroBlog (bm@nsouri.com),  
+2013-11-03 9:43:32 - INFO --> CC:  
+2013-11-03 9:43:32 - INFO --> BCC:  
+2013-11-03 9:43:32 - INFO --> Subject: Password reset 
+2013-11-03 9:43:32 - INFO --> Body: test 
+2013-11-03 9:44:04 - INFO --> -------------------------- 
+2013-11-03 9:44:04 - INFO --> Controller/Method: users/p_emailpassword 
+2013-11-03 9:44:04 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY bm@nsouri.com 
+2013-11-03 9:44:04 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
+2013-11-03 9:44:04 - INFO --> To: MicroBlog (bm@nsouri.com),  
+2013-11-03 9:44:04 - INFO --> CC:  
+2013-11-03 9:44:04 - INFO --> BCC:  
+2013-11-03 9:44:04 - INFO --> Subject: Password reset 
+2013-11-03 9:44:04 - INFO --> Body: test 
+2013-11-03 9:45:28 - INFO --> -------------------------- 
+2013-11-03 9:45:28 - INFO --> Controller/Method: users/p_emailpassword 
+2013-11-03 9:45:28 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
+2013-11-03 9:45:28 - INFO --> To: MicroBlog (bm@nsouri.com),  
+2013-11-03 9:45:28 - INFO --> CC:  
+2013-11-03 9:45:28 - INFO --> BCC:  
+2013-11-03 9:45:28 - INFO --> Subject: Password reset 
+2013-11-03 9:45:28 - INFO --> Body: test 
+2013-11-03 9:46:10 - INFO --> -------------------------- 
+2013-11-03 9:46:10 - INFO --> Controller/Method: users/p_emailpassword 
+2013-11-03 9:46:10 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
+2013-11-03 9:46:10 - INFO --> To: MicroBlog (bm@nsouri.com),  
+2013-11-03 9:46:10 - INFO --> CC:  
+2013-11-03 9:46:10 - INFO --> BCC:  
+2013-11-03 9:46:10 - INFO --> Subject: Password reset 
+2013-11-03 9:46:10 - INFO --> Body: test 
+2013-11-03 9:47:43 - INFO --> -------------------------- 
+2013-11-03 9:47:43 - INFO --> Controller/Method: users/p_emailpassword 
+2013-11-03 9:47:43 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
+2013-11-03 9:47:43 - INFO --> To: MicroBlog (bm@nsouri.com),  
+2013-11-03 9:47:43 - INFO --> CC:  
+2013-11-03 9:47:43 - INFO --> BCC:  
+2013-11-03 9:47:43 - INFO --> Subject: Password reset message from MicroBlog 
+2013-11-03 9:47:43 - INFO --> Body: test 
+2013-11-03 9:50:33 - INFO --> -------------------------- 
+2013-11-03 9:50:33 - INFO --> Controller/Method: users/p_emailpassword 
+2013-11-03 9:50:33 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
+2013-11-03 9:50:33 - INFO --> To: MicroBlog (bm@nsouri.com),  
+2013-11-03 9:50:33 - INFO --> CC:  
+2013-11-03 9:50:33 - INFO --> BCC:  
+2013-11-03 9:50:33 - INFO --> Subject: Password reset message from MicroBlog 
+2013-11-03 9:50:33 - INFO --> Body: test 
+2013-11-03 9:51:21 - INFO --> -------------------------- 
+2013-11-03 9:51:21 - INFO --> Controller/Method: users/p_emailpassword 
+2013-11-03 9:51:21 - INFO --> From: MicroBlog (webmaster@dwa1.biz) 
+2013-11-03 9:51:21 - INFO --> To: MicroBlog (bm@nsouri.com),  
+2013-11-03 9:51:21 - INFO --> CC:  
+2013-11-03 9:51:21 - INFO --> BCC:  
+2013-11-03 9:51:21 - INFO --> Subject: Password reset message from MicroBlog 
+2013-11-03 9:51:21 - INFO --> Body: test 

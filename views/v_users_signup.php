@@ -14,9 +14,14 @@
 	   Password: <input type='password' name='password' required><BR><BR>
     </div>
        
-    <?php if(isset($error)): ?>
+    <?php if($error=='error'): ?>
         <div id='error' class='errors'>
-            Sign-up failed. Please use a different email.
+            Sign-up failed. Please use a different email. This email has been already used.
+        </div>
+        <br>
+    <?php elseif($error=='error2'): ?>    
+        <div id='error' class='errors'>
+            Sign-up failed. Please use enter all information.
         </div>
         <br>
     <?php endif; ?>

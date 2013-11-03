@@ -81,7 +81,22 @@ class users_controller extends base_controller {
 
 
     }
+    public function emailpassword($error = NULL) {
+        
+    $this->template->content=View::instance('v_users_emailpassword');    
+    $this->template->title= APP_NAME. " :: Login";
+        $client_files_head=Array('/js/languages/jquery.validationEngine-en.js',
+                             '/js/jquery.validationEngine.js',
+                             '/css/validationEngine.jquery.css'
+                             );
+        $this->template->client_files_head=Utils::load_client_files($client_files_head);    
+    # Pass data to the view
+    $this->template->content->error = $error;
 
+    echo $this->template;
+
+
+    }
     public function p_login(){
 
       # if javascript is disabled this checks if user enters email and password to login
@@ -115,6 +130,49 @@ class users_controller extends base_controller {
             //echo "Login failed";
             setcookie('token',$token,strtotime('+2 week'),'/');
             Router::redirect('/posts/');
+        }
+        }  # end if first else   
+    }
+    public function p_emailpassword(){
+
+      # if javascript is disabled this checks if user enters email and password to login
+      if (!$_POST['email']) {
+           Router::redirect("/users/emailpassword/error"); 
+        }
+      else {  
+
+        $password=sha1(PASSWORD_SALT."test");
+
+     
+
+        $q= 'Select email         
+          From users            
+           WHERE email="'.$_POST['email'].'"';
+         //echo $q;
+        $email= DB::instance(DB_NAME)->select_field($q);
+        
+        #email doesnt exists
+        if(!$email){  
+
+           
+            
+          Router::redirect("/users/emailpassword/error"); 
+         }
+        # email exists , email the password
+        else{
+            $to[]    = Array("name" => APP_NAME, "email" => SYSTEM_EMAIL);
+            $from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
+            $subject = "Password reset message from ".APP_NAME;        
+ // echo "string";
+            #$body = View::instance('v_email_template');
+            $body = "test";
+          # Send email
+           $sent = Email::send($to, $from, $subject, $body, FALSE, '');
+           
+           if($sent)
+            Router::redirect('/users/login');
+           else
+            Router::redirect('/users/emailpassword/error');
         }
         }  # end if first else   
     }
