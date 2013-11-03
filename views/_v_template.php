@@ -24,18 +24,18 @@
 <div id="header">MicroBlog
     </div>
 <div id="top">
-    <a href='/'>Home</a>:: 
+    <a class="nav-link" href='/'>Home</a>:: 
                
             <?php if($user): ?>
-                <a href='/posts/add'>Add Post</a> :: 
-                <a href='/posts/'>View Posts</a> :: 
-                <a href='/posts/users'>Follow Users</a> :: 
-                <a href='/posts/own'>My Own Posts</a> ::
-                 <a href='/users/editprofile'>Edit Profile</a> :: 
-                <a href='/users/logout'>Logout</a>
+                <a class="nav-link"  href='/posts/add'>Add Post</a> :: 
+                <a class="nav-link" href='/posts/'>View Posts</a> :: 
+                <a class="nav-link" href='/posts/users'>Follow Users</a> :: 
+                <a class="nav-link" href='/posts/own'>My Own Posts</a> ::
+                 <a class="nav-link" href='/users/editprofile'>Edit Profile</a> :: 
+                <a class="nav-link" href='/users/logout'>Logout</a>
             <?php else: ?>
-                <a href='/users/signup'>Sign Up</a> :: 
-                <a href='/users/login'>Log In</a>
+                <a class="nav-link" href='/users/signup'>Sign Up</a> :: 
+                <a class="nav-link" href='/users/login'>Log In</a>
             <?php endif; ?><BR>
             <?php if($user): ?>
                 You are logged in as <?=$user->first_name?> <?=$user->last_name?><br>
@@ -47,7 +47,7 @@
 </div>
 
 
-<div id="footer">
+<div id="footer">Project 2 :: Dynamic Web Applications :: Harvard Extension school ::  Babak Mansouri
     </div>
 	<?php if(isset($client_files_body)) echo $client_files_body; ?>
 

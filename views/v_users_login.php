@@ -4,13 +4,15 @@
         $("#formID").validationEngine('attach');
        });
     </script>
-<form id="formID" method='POST' action='/users/p_login'>
+    
+    <div class="container">
+    <form id="formID" method='POST' action='/users/p_login'>
 
-    Email: <input class="validate[required,custom[email]] text-input" type="text" name="email" id="email" /><br><BR>
+        <label>Email:</label> <input class="validate[required,custom[email]] text-input" type="text" name="email" id="email" /><BR>
    
-    Password: <input type='text' name='password'><br>
-
-    <BR>
+        <label>Password:</label>  <input type='text' name='password'><br>
+    </div>
+    
     
     <?php if(isset($error)): ?>
         <div id='error' class='errors'>
@@ -19,7 +21,6 @@
         <br>
     <?php endif; ?>
 
-    
     <input type='submit' value='Login' >
 
 </form>
