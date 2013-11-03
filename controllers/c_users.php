@@ -2,11 +2,14 @@
 class users_controller extends base_controller {
 
     public function __construct() {
-        parent::__construct();
-      //  echo "users_controller construct called<br><br>";
+        parent::__construct(); 
+
     } 
 
     public function index() {
+        if(!$this->user){
+           die('Members Only <a href="/users/login">Login</a>');
+        }   
         echo "This is the index page";
     }
 
@@ -110,7 +113,11 @@ class users_controller extends base_controller {
     }
     public function update(){
 
-           
+        if(!$this->user){
+        //Router::redirect('/');
+       die('Members Only <a href="/users/login">Login</a>');
+
+        }   
         $new_modified= Time::now();
         $new_password= sha1(PASSWORD_SALT.$_POST['password']); 
         #$new_first_name=$_POST['first_name']
@@ -127,6 +134,12 @@ class users_controller extends base_controller {
           
     }
     public function logout() {
+
+        if(!$this->user){
+        //Router::redirect('/');
+          die('Members Only <a href="/users/login">Login</a>');
+        } 
+
         $new_token=sha1(TOKEN_SALT.$this->user->email.Utils::generate_random_string()); 
         $data=Array('token'=>$new_token);
         DB::instance(DB_NAME)->update('users',$data,'WHERE user_id=' .$this->user->user_id);
@@ -139,8 +152,8 @@ class users_controller extends base_controller {
 
 
     if(!$this->user){
-       // Router::redirect('/');
-        die('Members Only <a href="/users/login">Login</a>');
+        //Router::redirect('/');
+       die('Members Only <a href="/users/login">Login</a>');
 
     }
 

@@ -47,7 +47,7 @@
 </div>
 
 
-<div id="footer">Project 2 :: Dynamic Web Applications :: Harvard Extension school ::  Babak Mansouri
+<div id="footer">Project 2 :: Dynamic Web Applications :: Harvard Extension School ::  Babak Mansouri
     </div>
 	<?php if(isset($client_files_body)) echo $client_files_body; ?>
 
