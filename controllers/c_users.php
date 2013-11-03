@@ -20,7 +20,7 @@ class users_controller extends base_controller {
         $client_files_head=Array('/js/languages/jquery.validationEngine-en.js',
                              '/js/jquery.validationEngine.js',
                              '/css/validationEngine.jquery.css');
-        
+
         $this->template->client_files_head=Utils::load_client_files($client_files_head);
         # error checking passed to view
         $this->template->content->error = $error;
@@ -166,7 +166,7 @@ class users_controller extends base_controller {
               $success= DB::instance(DB_NAME)->update('users',$data,'WHERE user_id=' .$user_id); 
          
             
-            $to[]    = Array("name" => APP_NAME, "email" => SYSTEM_EMAIL);
+            $to[]    = Array("name" => $_POST['email'], "email" => $_POST['email']);
             $from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
             $subject = "Password reset message from ".APP_NAME;        
 
