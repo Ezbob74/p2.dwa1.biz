@@ -43,8 +43,9 @@
     </div>
 
 <div id="center">
-    <?php if(isset($content)) echo $content; ?></div>
- <br>
+    <?php if(isset($content)) echo $content; ?>
+</div>
+
 
 <div id="footer">
     </div>

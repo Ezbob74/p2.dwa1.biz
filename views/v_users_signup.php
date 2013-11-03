@@ -1,4 +1,4 @@
-<h2>Sign Up</h2>
+<strong>Sign Up</strong><BR><BR>
  <script>
     $(document).ready(function(){
         $("#formID").validationEngine('attach');
@@ -10,7 +10,7 @@
 	
 	Email <input class="validate[required,custom[email]] text-input" type="text" name="email" id="email" /><BR><BR>
 	Password <input type='password' name='password' required><BR><BR>
-<?php if(isset($error)): ?>
+    <?php if(isset($error)): ?>
         <div id='error' class='errors'>
             Sign-up failed. Please use a different email.
         </div>

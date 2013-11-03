@@ -1,4 +1,4 @@
-<h2> Log in</h2>
+<strong> Log in</strong><BR><BR>
     <script>
     $(document).ready(function(){
         $("#formID").validationEngine('attach');
