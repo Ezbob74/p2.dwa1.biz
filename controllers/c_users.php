@@ -43,7 +43,10 @@ class users_controller extends base_controller {
             Router::redirect("/users/signup/error"); 
           
          }
-        #
+         #requires all fields to be entered if java script is disabled
+        elseif (!$_POST['email'] OR !$_POST['last_name'] OR !$_POST['first_name'] OR !$_POST['password']) {
+           Router::redirect("/users/signup/error2"); 
+        }
         else{
            
             $_POST['created']= Time::now();
@@ -81,6 +84,11 @@ class users_controller extends base_controller {
 
     public function p_login(){
 
+      # if javascript is disabled this checks if user enters email and password to login
+      if (!$_POST['email'] OR !$_POST['password']) {
+           Router::redirect("/users/login/error"); 
+        }
+      else {  
         $_POST['password']=sha1(PASSWORD_SALT.$_POST['password']);
 
      //   echo "<pre>";
@@ -108,8 +116,7 @@ class users_controller extends base_controller {
             setcookie('token',$token,strtotime('+2 week'),'/');
             Router::redirect('/posts/');
         }
-
-            
+        }  # end if first else   
     }
     public function update(){
 
@@ -203,9 +210,7 @@ class users_controller extends base_controller {
   
   # Pass information to the view instance
   //  $this->template->content->user_name=$user_name;
- 
-
-        # Render View  
+       # Render View  
      echo $this->template;
 
  
