@@ -1,5 +1,5 @@
 <?php foreach($posts as $post): ?>
 
-	<?=$post['content']?><a href='/posts/delete/<?=$post['post_id']?>'><BR>Delete Post</a><br><br>
+	<div id='posts'><?=$post['content']?><a href='/posts/delete/<?=$post['post_id']?>'><BR>Delete Post</a></div><br>
 
 <?php endforeach; ?>

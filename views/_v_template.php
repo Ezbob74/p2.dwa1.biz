@@ -26,11 +26,12 @@
 </head>
 
 <body>  
-<div id="main">  
-    <nav>
-        <menu>
-                <a href='/'>Home</a>:: 
-                
+
+<div id="header">MicroBlog
+    </div>
+<div id="top">
+    <a href='/'>Home</a>:: 
+               
             <?php if($user): ?>
                 <a href='/posts/add'>Add Post</a> :: 
                 <a href='/posts/'>View Posts</a> :: 
@@ -41,20 +42,18 @@
             <?php else: ?>
                 <a href='/users/signup'>Sign Up</a> :: 
                 <a href='/users/login'>Log In</a>
+            <?php endif; ?><BR>
+            <?php if($user): ?>
+                You are logged in as <?=$user->first_name?> <?=$user->last_name?><br>
             <?php endif; ?>
-        </menu>
-    </nav>
-    
-    <?php if($user): ?>
-        You are logged in as <?=$user->first_name?> <?=$user->last_name?><br>
-    <?php endif; ?>
-    
-   <br>
+    </div>
 
-    <?php if(isset($content)) echo $content; ?>
+<div id="center">
+    <?php if(isset($content)) echo $content; ?></div>
  <br>
 
-
+<div id="footer">
+    </div>
 	<?php if(isset($client_files_body)) echo $client_files_body; ?>
 
     <!-- JS/CSS File every page -->
