@@ -10,7 +10,7 @@
 
         <label>Email:</label> <input class="validate[required,custom[email]] text-input" type="text" name="email" id="email" required/><BR>
    
-        <label>Password:</label>  <input type='text' name='password' required><br><BR>
+        <label>Password:</label>  <input type='password' name='password' required><br><BR>
     </div>
     
     
