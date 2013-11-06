@@ -5,9 +5,10 @@
         $("#formID").validationEngine('attach');
        });
     </script>
+    <form id="formID" method='POST' action='/users/p_signup'>
     <div class="container">
     <!-- validate first name, last name, email and make them all required , first name and last name can be letters only-->
-    <form id="formID" method='POST' action='/users/p_signup'>
+    
 	   First Name: <input class="validate[custom[onlyLetterSp]]" type='text' name='first_name' required><BR>
 	   Last Name: <input class="validate[custom[onlyLetterSp]]" type='text' name='last_name' required><BR>
 	   Email: <input class="validate[required,custom[email]] text-input" type="text" name="email" id="email" required/><BR>
@@ -27,4 +28,4 @@
     <?php endif; ?>
 	<input type='submit' value='Sign Up'>
     <input type='reset' value='Reset'> 
-</form>
+    </form>
