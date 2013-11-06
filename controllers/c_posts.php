@@ -28,8 +28,7 @@ class posts_controller extends base_controller {
 
     #    this function is to add posts   
 	public function p_add(){
-        # looks for urls and make them links    
-		$_POST['content'] = Utils::make_urls_links($_POST['content'] );
+       
         $_POST['user_id'] = $this->user->user_id;
 		$_POST['created'] = Time::now();
 		$_POST['modified'] = Time::now();
