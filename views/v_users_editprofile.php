@@ -1,5 +1,5 @@
  <!-- Show users profile in the form and let him edit it -->
-<strong>User Profile</strong><BR><BR>
+<strong>Edit User Profile</strong><BR><BR>
 <script>
     $(document).ready(function(){
         $("#formID").validationEngine('attach');

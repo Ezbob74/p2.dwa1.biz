@@ -1,3 +1,4 @@
+<strong>Follow/Unfollow Users</strong><BR><BR>
 <?php foreach($users as $user): ?>
 
     <!-- Print this user's name with a link to users profile -->
