@@ -1,8 +1,8 @@
 <?php if($posts): ?>
+	 <!-- Show posts and display a link to users profile -->
 	<?php foreach($posts as $post): ?>
 
 	<div id='posts'><strong><a href='/users/profile/<?=$post['email']?>'><?=$post['first_name']?></a></strong><BR>
-	
 
 	<?=$post['content']?></div><br><br>
 	

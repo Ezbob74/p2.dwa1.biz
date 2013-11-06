@@ -1,4 +1,6 @@
-<strong> Log in</strong><BR><BR>
+<!--Login page and error validation -->    
+    <strong> Log in</strong><BR><BR>
+    
     <script>
     $(document).ready(function(){
         $("#formID").validationEngine('attach');
@@ -13,7 +15,8 @@
         <label>Password:</label>  <input type='password' name='password' required><br><BR>
     </div>
     
-    
+    <!-- Display errors-->
+
     <?php if(isset($error)): ?>
         <div id='error' class='errors'>
             Login failed. Please check your email and password. <a href='/users/emailpassword'>Forgot password?</a>
@@ -23,5 +26,5 @@
 
     <input type='submit' value='Login' >
     <input type='reset' value='Reset'> 
-</form>
+    </form>
 

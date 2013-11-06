@@ -1,3 +1,4 @@
+<!--add posts view allowing posting of size 140 chars -->
 <script>
     $(document).ready(function(){
         $("#formID").validationEngine('attach');

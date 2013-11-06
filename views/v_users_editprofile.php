@@ -1,3 +1,4 @@
+ <!-- Show users profile in the form and let him edit it -->
 <strong>User Profile</strong><BR><BR>
 <script>
     $(document).ready(function(){
@@ -10,7 +11,8 @@
 	Last Name: <input value='<?=$user->last_name?>' class="validate[custom[onlyLetterSp]]" type='text' name='last_name' required><BR>
 	Email: <input  value='<?=$user->email?>' class="validate[required,custom[email]] text-input" type="text" name="email" id="email" /><BR>
 	Password: <input  type='password' name='password' required><BR>
-</div>    
+</div>
+<!--display errors-->    
     <?php if(isset($error)): ?>
         <div id='error' class='errors'>
             Update failed. Please use a different email.

@@ -1,111 +1,121 @@
 @charset "utf-8";
 /* CSS Document*/
-/*Define the body element's color*/
+/*-------------------------------------------------------------------------------------------------
+General
+-------------------------------------------------------------------------------------------------*/
 body{ 
-background-color:#dc8;
-font-size:16px; 
-margin:0; 
-padding:0; 
-margin:0 auto;
-width: 960px;
-}
-
-#header{ 
-background-color:#333;
-height:150px;
-margin:0 auto;
-font-family:Verdana,Helvetica,sans-serif;
-	font-size:58px;
-	color: white;
-}
-
-#top{ 
-width:100%;
-background-color:#dc8; 
-height:50px;
-text-align: center;
-vertical-align: middle;
-font-family:Verdana,Helvetica,sans-serif;
-font-size:18px;
-}
-
-#posts{ 
-background-color:#D6D6FF; 
-width:98%;
-margin:0 auto;
-/*height:50px;*/
-}
-#center { 
-width:98%;	
-background-color:#eec; 
-min-height:600px; /* for modern browsers */
-height:auto !important; /* for modern browsers */
-height:600px; /* for IE5.x and IE6 */
-font-family:Verdana,Helvetica,sans-serif;
-font-size:18px;
-vertical-align: middle;
-padding:20px;
-}
-
-#footer { 
-clear:both;
-background-color:#333;
-height:40px;
-font-family:Verdana,Helvetica,sans-serif;
-font-size:16px;
-color:white;
-text-align: center;
-vertical-align: middle;
-line-height: 40px;
+      background-color:#dc8;
+      font-size:16px; 
+      margin:0; 
+      padding:0; 
+      margin:0 auto;
+      width: 960px;
 }
 h1 {
-	font-family:Verdana,Helvetica,sans-serif;
-	font-size: 38px;
+     font-family:Verdana,Helvetica,sans-serif;
+     font-size: 38px;
 }
 /*This section is for the paragraph section*/
 p {
-	font-family:Verdana,Helvetica,sans-serif;
-	font-size:18px;
+     font-family:Verdana,Helvetica,sans-serif;
+     font-size:18px;
 }
+/*-------------------------------------------------------------------------------------------------
+Main pieces
+-------------------------------------------------------------------------------------------------*/
+#header{ 
+      background-color:#333;
+      height:150px;
+      margin:0 auto;
+      font-family:Verdana,Helvetica,sans-serif;
+	    font-size:58px;
+	    color: white;
+}
+
+#top{ 
+      width:100%;
+      background-color:#dc8; 
+      height:50px;
+      text-align: center;
+      vertical-align: middle;
+      font-family:Verdana,Helvetica,sans-serif;
+      font-size:18px;
+}
+
+#posts{ 
+      background-color:#D6D6FF; 
+      width:98%;
+      margin:0 auto;
+}
+#center { 
+      width:98%;	
+      background-color:#eec; 
+      min-height:600px; /* for modern browsers */
+      height:auto !important; /* for modern browsers */
+      height:600px; /* for IE5.x and IE6 */
+      font-family:Verdana,Helvetica,sans-serif;
+      font-size:18px;
+      vertical-align: middle;
+      padding:20px;
+}
+
+#footer { 
+      clear:both;
+      background-color:#333;
+      height:40px;
+      font-family:Verdana,Helvetica,sans-serif;
+      font-size:16px;
+      color:white;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 40px;
+}
+
 #error {
-	font-family:Verdana,Helvetica,sans-serif;
-	color:red;
-	font-size:18px;
+	   font-family:Verdana,Helvetica,sans-serif;
+	   color:red;
+	   font-size:18px;
 }
 /*This section is for the main body of the page.*/
 #main {
-	margin:0 auto;
-	width: 760px;
+	   margin:0 auto;
+	   width: 760px;
 }
 nav {
-	font-family:Verdana,Helvetica,sans-serif;
-	font-size: 16px;
+	   font-family:Verdana,Helvetica,sans-serif;
+	   font-size: 16px;
 }
+/*-------------------------------------------------------------------------------------------------
+Organizes Forms look
+-------------------------------------------------------------------------------------------------*/
 .container {
-        width: 400px;
-        clear: both;
+     width: 400px;
+     clear: both;
     }
 .container input {
-        width: 100%;
-        clear: both;
+     width: 100%;
+     clear: both;
     }
+/*-------------------------------------------------------------------------------------------------
+Links
+-------------------------------------------------------------------------------------------------*/
 a.nav-link:link
 {
-   color: #222731;
-   text-decoration: none;
+      color: #222731;
+      text-decoration: none;
 }
 a.nav-link:visited
 {
-   color: #222731;
-   text-decoration: none;
+      color: #222731;
+      text-decoration: none;
 }
 a.nav-link:hover
 {
-   color: #6699FF;
-   text-decoration: underline;
+      color: #6699FF;
+      text-decoration: underline;
 }
 a.nav-link:active
 {
-   color: #222731;
-   text-decoration: none;
+      color: #222731;
+      text-decoration: none;
 }

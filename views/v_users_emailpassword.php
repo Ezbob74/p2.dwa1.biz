@@ -1,4 +1,5 @@
-<strong> Forgot Password? Enter your email and a new password will be emailed to you.</strong><BR><BR>
+ <!-- let the user enter their email to reset the password -->
+    <strong> Forgot Password? Enter your email and a new password will be emailed to you.</strong><BR><BR>
     <script>
     $(document).ready(function(){
         $("#formID").validationEngine('attach');
@@ -12,7 +13,7 @@
           
     </div>
     
-    
+<!-- lDisplay the errors -->    
     <?php if(isset($error)): ?>
         <div id='error' class='errors'>
            
@@ -26,6 +27,6 @@
         <br>
     <?php endif; ?>
 
-    <input type='submit' value='Email Password' >
-    <input type='reset' value='Reset'> 
-</form>
+        <input type='submit' value='Email Password' >
+        <input type='reset' value='Reset'> 
+    </form>

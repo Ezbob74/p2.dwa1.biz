@@ -1,4 +1,6 @@
-
+/*-------------------------------------------------------------------------------------------------
+Organizes Forms error reporting look
+-------------------------------------------------------------------------------------------------*/
 
 
 /* Z-INDEX */
@@ -9,8 +11,6 @@
     .ui-dialog .formError { z-index: 5000; }
     .ui-dialog .formError .formErrorContent { z-index: 5001; }
     .ui-dialog .formError .formErrorArrow { z-index: 5006; }
-
-
 
 
 .inputContainer {

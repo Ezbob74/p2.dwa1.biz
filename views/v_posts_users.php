@@ -1,6 +1,6 @@
 <?php foreach($users as $user): ?>
 
-    <!-- Print this user's name -->
+    <!-- Print this user's name with a link to users profile -->
     <a href='/users/profile/<?=$user['email']?>'><?=$user['first_name']?> <?=$user['last_name']?></a>
 
     <!-- If there exists a connection with this user, show a unfollow link -->

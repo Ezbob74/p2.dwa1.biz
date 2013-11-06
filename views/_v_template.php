@@ -5,10 +5,10 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
 	
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  	<link rel="stylesheet" href="/css/sample-app.css" type="text/css">
+    
+	<link rel="stylesheet" href="/css/sample-app.css" type="text/css">
     <!-- Controller Specific JS/CSS -->
 	<?php if(isset($client_files_head)) echo $client_files_head; ?>
 	
@@ -18,9 +18,10 @@
 
 <div id="header">MicroBlog
     </div>
+
+<!-- Show navigation-->           
 <div id="top">
     <a class="nav-link" href='/'>Home</a>:: 
-               
             <?php if($user): ?>
                 <a class="nav-link"  href='/posts/add'>Add Post</a> :: 
                 <a class="nav-link" href='/posts/'>View Posts</a> :: 
@@ -35,18 +36,18 @@
             <?php if($user): ?>
                 You are logged in as <?=$user->first_name?> <?=$user->last_name?><br>
             <?php endif; ?>
-    </div>
-
-<div id="center">
-    <?php if(isset($content)) echo $content; ?>
 </div>
 
-
+<div id="center">
+<!--Display content-->
+    <?php if(isset($content)) echo $content; ?>
+</div>
+<!--Display footer-->
 <div id="footer">Project 2 :: Dynamic Web Applications :: Harvard Extension School ::  Babak Mansouri
-    </div>
-	<?php if(isset($client_files_body)) echo $client_files_body; ?>
+    
+</div>
 
-    <!-- JS/CSS File every page -->
+	<?php if(isset($client_files_body)) echo $client_files_body; ?>
     
 </div>  
 </body>
