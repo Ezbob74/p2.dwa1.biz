@@ -19,6 +19,6 @@
         <br>
     <?php endif; ?>
 	<input type='submit' value='Update'>
-
+    <input type='reset' value='Reset'> 
 </form>
 
