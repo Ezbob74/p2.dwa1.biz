@@ -7,6 +7,7 @@ class users_controller extends base_controller {
     } 
 
     public function index() {
+        // If user is not logged in redirect them to login
         if(!$this->user){
            die('Members Only <a href="/users/login">Login</a>');
         }   
@@ -17,6 +18,7 @@ class users_controller extends base_controller {
         $this->template->content=View::instance('v_users_signup');
 
         $this->template->title= APP_NAME. " :: Sign up";
+            // add required js and css files to be used in the form
         $client_files_head=Array('/js/languages/jquery.validationEngine-en.js',
                              '/js/jquery.validationEngine.js',
                              '/css/validationEngine.jquery.css');
@@ -39,7 +41,7 @@ class users_controller extends base_controller {
         #success
         if($emailexists){  
 
-           // echo "";
+          
             Router::redirect("/users/signup/error"); 
           
          }
@@ -69,6 +71,7 @@ class users_controller extends base_controller {
         
     $this->template->content=View::instance('v_users_login');    
     $this->template->title= APP_NAME. " :: Login";
+        // add required js and css files to be used in the form
         $client_files_head=Array('/js/languages/jquery.validationEngine-en.js',
                              '/js/jquery.validationEngine.js',
                              '/css/validationEngine.jquery.css'
@@ -85,7 +88,8 @@ class users_controller extends base_controller {
         
     $this->template->content=View::instance('v_users_emailpassword');    
     $this->template->title= APP_NAME. " :: Login";
-        $client_files_head=Array('/js/languages/jquery.validationEngine-en.js',
+        // add required js and css files to be used in the form
+    $client_files_head=Array('/js/languages/jquery.validationEngine-en.js',
                              '/js/jquery.validationEngine.js',
                              '/css/validationEngine.jquery.css'
                              );
@@ -106,9 +110,7 @@ class users_controller extends base_controller {
       else {  
         $_POST['password']=sha1(PASSWORD_SALT.$_POST['password']);
 
-     //   echo "<pre>";
-      //  print_r($_POST);
-      //  echo "<pre>";
+   
 
         $q= 'Select token         
           From users            
@@ -183,28 +185,7 @@ class users_controller extends base_controller {
         }
         }  # end if first else   
     }
-    public function update(){
-
-        if(!$this->user){
-        //Router::redirect('/');
-       die('Members Only <a href="/users/login">Login</a>');
-
-        }   
-        $new_modified= Time::now();
-        $new_password= sha1(PASSWORD_SALT.$_POST['password']); 
-        #$new_first_name=$_POST['first_name']
-
-        $data=Array('modified'=>$new_modified,
-                    'password'=>$new_password,
-                    'first_name'=>$_POST['first_name'],
-                    'last_name'=>$_POST['last_name'],
-                    'email'=>$_POST['email']
-                    );
-        DB::instance(DB_NAME)->update('users',$data,'WHERE user_id=' .$this->user->user_id);
-            Router::redirect('/posts/');
-        
-          
-    }
+    
     public function logout() {
 
         if(!$this->user){
@@ -236,15 +217,10 @@ class users_controller extends base_controller {
    $q= 'Select *         
           From users            
            WHERE email="'.$user_name.'"';
-        // echo $q;
-        $user= DB::instance(DB_NAME)->select_row($q);
+    $user= DB::instance(DB_NAME)->select_row($q);
 
     $this->template->content->user=$user;
-    // $this->template->content->first_name=$first_name;
-    // $content->user_name=$user_name;
-
-     //$this->template->content=$content;
-
+   
     # Render View    
      echo $this->template;
 
@@ -252,17 +228,17 @@ class users_controller extends base_controller {
   }
   // This function is to edit users profile 
   public function editprofile() {
-
+  // If user is not logged in redirect them to login
     if(!$this->user){
-       // Router::redirect('/');
-        die('Members Only <a href="/users/login">Login</a>');
+       
+               die('Members Only <a href="/users/login">Login</a>');
 
     }
   # Create a new View instance
     $this->template->content=View::instance('v_users_editprofile');    
   # Page title  
     $this->template->title= APP_NAME. ":: Edit Profile";
-  //  $this->template->title= "Profile :: ".$user_name;
+     // add required js and css files to be used in the form
     $client_files_head=Array('/js/languages/jquery.validationEngine-en.js',
                              '/js/jquery.validationEngine.js',
                              '/css/validationEngine.jquery.css'
@@ -270,17 +246,37 @@ class users_controller extends base_controller {
     $this->template->client_files_head=Utils::load_client_files($client_files_head);
 
 
-    $client_files_body=Array('/js/profile2.js');
-    $this->template->client_files_body=Utils::load_client_files($client_files_body);
+   # $client_files_body=Array('/js/profile2.js');
+   # $this->template->client_files_body=Utils::load_client_files($client_files_body);
   
   # Pass information to the view instance
-  //  $this->template->content->user_name=$user_name;
        # Render View  
      echo $this->template;
 
  
 
   }
+  public function update(){
+        // If user is not logged in redirect them to login
+        if(!$this->user){
+            die('Members Only <a href="/users/login">Login</a>');
+
+        }   
+        $new_modified= Time::now();
+        $new_password= sha1(PASSWORD_SALT.$_POST['password']); 
+        #$new_first_name=$_POST['first_name']
+
+        $data=Array('modified'=>$new_modified,
+                    'password'=>$new_password,
+                    'first_name'=>$_POST['first_name'],
+                    'last_name'=>$_POST['last_name'],
+                    'email'=>$_POST['email']
+                    );
+        DB::instance(DB_NAME)->update('users',$data,'WHERE user_id=' .$this->user->user_id);
+            Router::redirect('/posts/');
+        
+          
+    }
 
 
 } # end of the class

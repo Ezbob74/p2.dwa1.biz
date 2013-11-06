@@ -1,6 +1,6 @@
 <?php if($user): ?>
 
-	Hello <?=$user->first_name;?>
+	<?php Router::redirect("/posts/own"); ?>
 
 <?php else: ?>
 	Welcome to MicroBlog. Please sign up or login.<BR><BR>

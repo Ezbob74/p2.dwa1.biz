@@ -7,13 +7,8 @@
 	
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"></script>
-    <!--<script src="/js/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/js/jquery-1.8.2.min.js" type="text/javascript">
-    </script><link rel="stylesheet" href="/css/template.css" type="text/css"/>-->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    
-	<link rel="stylesheet" href="/css/sample-app.css" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  	<link rel="stylesheet" href="/css/sample-app.css" type="text/css">
     <!-- Controller Specific JS/CSS -->
 	<?php if(isset($client_files_head)) echo $client_files_head; ?>
 	

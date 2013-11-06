@@ -1,21 +1,22 @@
 <?php 
+# This is the posts controller
 
 class posts_controller extends base_controller {
 	
  public function __construct() {
         parent::__construct();
-      //  echo "users_controller construct called<br><br>";
+        // If user is not logged in redirect them to login
     	if(!$this->user){
-       // Router::redirect('/');
         die('Members Only Click here to <a href="/users/login">Login</a>');
     	}
     } 
 
-
+# this function is to to view the add posts    
 	public function add() {
 
 		$this->template->content = View::instance("v_posts_add");
         $this->template->title= APP_NAME. " :: Add Post ";
+        // add required js and css files to be used in the form
         $client_files_head=Array('/js/languages/jquery.validationEngine-en.js',
                              '/js/jquery.validationEngine.js',
                              '/css/validationEngine.jquery.css'
@@ -25,6 +26,7 @@ class posts_controller extends base_controller {
 
 	}
 
+# this function is to add posts   
 	public function p_add(){
         # looks for urls and make them links    
 		$_POST['content'] = Utils::make_urls_links($_POST['content'] );
@@ -50,7 +52,8 @@ class posts_controller extends base_controller {
             posts.user_id AS post_user_id,
             users_users.user_id AS follower_id,
             users.first_name,
-            users.last_name
+            users.last_name,
+            users.email
         FROM posts
         INNER JOIN users_users 
             ON posts.user_id = users_users.user_id_followed
@@ -70,7 +73,7 @@ class posts_controller extends base_controller {
     echo $this->template;
 
 	}
-
+# This function shows users own posts
 public function own(){
 
          # Set up the View

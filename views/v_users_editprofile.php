@@ -1,4 +1,3 @@
-
 <strong>User Profile</strong><BR><BR>
 <script>
     $(document).ready(function(){
@@ -19,6 +18,5 @@
         <br>
     <?php endif; ?>
 	<input type='submit' value='Update'>
-    <input type='reset' value='Reset'> 
 </form>
 

@@ -1,7 +1,7 @@
 <?php if($posts): ?>
 	<?php foreach($posts as $post): ?>
 
-	<div id='posts'><strong><?=$post['first_name']?></strong><BR>
+	<div id='posts'><strong><a href='/users/profile/<?=$post['email']?>'><?=$post['first_name']?></a></strong><BR>
 	
 
 	<?=$post['content']?></div><br><br>
