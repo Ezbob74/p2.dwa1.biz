@@ -6,10 +6,11 @@
         $("#formID").validationEngine('attach');
        });
     </script>
+
+    <form id="formID" method='POST' action='/users/p_login'>
     
     <div class="container">
-    <form id="formID" method='POST' action='/users/p_login'>
-
+  
         <label>Email:</label> <input class="validate[required,custom[email]] text-input" type="text" name="email" id="email" required/><BR>
    
         <label>Password:</label>  <input type='password' name='password' required><br><BR>
