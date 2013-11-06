@@ -1,4 +1,5 @@
  <?php if($posts): ?>
+<strong>My posts</strong><BR><BR>
  <!-- loop through users posts and let her delete them  -->
  <?php foreach($posts as $post): ?>
 

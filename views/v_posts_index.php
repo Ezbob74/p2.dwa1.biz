@@ -1,4 +1,5 @@
 <?php if($posts): ?>
+<strong>Posts you are following</strong><BR><BR>
 	 <!-- Show posts and display a link to users profile -->
 	<?php foreach($posts as $post): ?>
 

@@ -5,8 +5,8 @@
         $("#formID").validationEngine('attach');
        });
 </script>
-<div class="container">
 <form id="formID" method='POST' action='/users/update'>
+<div class="container">
 	First Name: <input value='<?=$user->first_name?>' class="validate[custom[onlyLetterSp]]" type='text' name='first_name' required><BR>
 	Last Name: <input value='<?=$user->last_name?>' class="validate[custom[onlyLetterSp]]" type='text' name='last_name' required><BR>
 	Email: <input  value='<?=$user->email?>' class="validate[required,custom[email]] text-input" type="text" name="email" id="email" /><BR>

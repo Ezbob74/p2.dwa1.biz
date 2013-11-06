@@ -26,7 +26,7 @@
                 <a class="nav-link"  href='/posts/add'>Add Post</a> :: 
                 <a class="nav-link" href='/posts/'>View Posts</a> :: 
                 <a class="nav-link" href='/posts/users'>Follow Users</a> :: 
-                <a class="nav-link" href='/posts/own'>My Own Posts</a> ::
+                <a class="nav-link" href='/posts/own'>My Posts</a> ::
                  <a class="nav-link" href='/users/editprofile'>Edit Profile</a> :: 
                 <a class="nav-link" href='/users/logout'>Logout</a>
             <?php else: ?>
